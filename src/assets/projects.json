@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Support Ticket Application",
+    "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quisquam dolor quidem eius accusamus, dolorum molestiae aperiam porro dolorem error adipisci debitis eum eligendi corrupti? Reiciendis ducimus consectetur animi enim?",
+    "tools": "React.js, TailwindCSS, Node.js, Express",
+    "github": "www.github.com",
+    "live": "www.google.com",
+    "img": "/projectImages/avatar.png"
+  },
+  {
+    "title": "Support Ticket Application",
+    "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quisquam dolor quidem eius accusamus, dolorum molestiae aperiam porro dolorem error adipisci debitis eum eligendi corrupti? Reiciendis ducimus consectetur animi enim?",
+    "tools": "React.js, TailwindCSS, Node.js, Express",
+    "github": "www.github.com",
+    "live": "www.google.com",
+    "img": "/projectImages/avatar.png"
+  },
+  {
+    "title": "Support Ticket Application",
+    "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quisquam dolor quidem eius accusamus, dolorum molestiae aperiam porro dolorem error adipisci debitis eum eligendi corrupti? Reiciendis ducimus consectetur animi enim?",
+    "tools": "React.js, TailwindCSS, Node.js, Express",
+    "github": "www.github.com",
+    "live": "https://www.google.com",
+    "img": "/projectImages/avatar.png"
+  },
+  {
+    "title": "Support Ticket Application",
+    "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quisquam dolor quidem eius accusamus, dolorum molestiae aperiam porro dolorem error adipisci debitis eum eligendi corrupti? Reiciendis ducimus consectetur animi enim?",
+    "tools": "React.js, TailwindCSS, Node.js, Express",
+    "github": "www.github.com",
+    "live": "www.google.com",
+    "img": "/projectImages/avatar.png"
+  },
+  {
+    "title": "Support Ticket Application",
+    "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quisquam dolor quidem eius accusamus, dolorum molestiae aperiam porro dolorem error adipisci debitis eum eligendi corrupti? Reiciendis ducimus consectetur animi enim?",
+    "tools": "React.js, TailwindCSS, Node.js, Express",
+    "github": "www.github.com",
+    "live": "www.google.com",
+    "img": "/projectImages/avatar.png"
+  }
+]
