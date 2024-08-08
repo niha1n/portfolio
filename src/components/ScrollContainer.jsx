@@ -9,7 +9,7 @@ import { ReactLenis, useLenis } from 'lenis/react'
 function ScrollContainer() {
   return (
     <>
-    <ReactLenis root options={{ lerp: 0.3, duration: 3 }}>
+    <ReactLenis root options={{ lerp: 3, duration: 2}}>
       <Landing />
       <About />
       <Projects />

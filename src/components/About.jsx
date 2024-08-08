@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import dpImage from '../assets/avatar.png';
 import Typewriter from 'typewriter-effect';
-import { motion, useInView } from 'framer-motion';
+import { AnimatePresence, motion, useInView } from 'framer-motion';
 
 function About() {
 
@@ -85,18 +85,68 @@ function About() {
 
           <div className="flex w-4/5 h-3/4 flex-row ">
             <div className="flex w-2/3   pl-16 items-start justify-evenly flex-col gap-5">
-              <motion.h2 initial={{ x:-100, opacity: 0 }}
-                whileInView={{ x:inView ? 0 : -100 ,opacity: inView ?1:0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, }} className="text-5xl w-[70%] font-mark-pro  text-white">
-                about <span className="text-[#66fcf1]">me</span>?
-              </motion.h2>
+              <div className="w-full h-fit flex items-center justify-start gap-3">
+                <AnimatePresence>
+                <motion.h2
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{
+                    x: inView ? 0 : -100,
+                    opacity: inView ? 1 : 0,
+                  }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7 }}
+                  className="text-5xl  font-mark-pro  text-white overflow-hidden"
+                >
+                  about{' '}
+                </motion.h2>
+                <motion.div initial={{ x: -100, opacity: 0 }}
+                  whileInView={{
+                    x: inView ? 0 : -100,
+                    opacity: inView ? 1 : 0,
+                  }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7 }} className="flex w-fit justify-center items-center relative z-50 overflow-hidden">
+                  <motion.span
+                    initial={{ y: 0 }}
+                    whileInView={{ y: -50 }}
+                    exit={{y:50}}
+                    transition={{ duration:0.4, delay: 1.5 }}
+                    className="text-white inline-block overflow-clip relative text-5xl  font-mark-pro"
+                  >
+                    me{' '}
+                    
+                  </motion.span>{' '}
+                  <motion.span
+                      initial={{ y: 50 }}
+                      animate={{ y: inView?0:50 }}
+                      exit={{y:50}}
+                      transition={{ duration:0.4, delay: 1.5 }}
+                      className="text-[#66fcf1] absolute inline-block  text-5xl  font-mark-pro"
+                    >
+                      me
+                    </motion.span>
+                  </motion.div>
+                  <motion.h2
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{
+                    x: inView ? 0 : -100,
+                    opacity: inView ? 1 : 0,
+                  }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7 }}
+                  className="text-5xl  font-mark-pro  text-white overflow-hidden"
+                >
+                 {' '}
+                  ?
+                </motion.h2>
+                </AnimatePresence>
+              </div>
 
               <motion.p
-                initial={{ x:-100, opacity: 0 }}
-                whileInView={{  x:inView ? 0 : -100 ,opacity: inView ?1:0}}
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: inView ? 0 : -100, opacity: inView ? 1 : 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.7 ,}}
+                transition={{ duration: 0.7 }}
                 className=" font-montserrat w-[70%] text-grey"
               >
                 Hello, I'm Nihal N, a dedicated web developer from Kerala,
@@ -118,14 +168,17 @@ function About() {
               </motion.button>
             </div>
             <motion.div
-             initial={{ opacity: 0, x:50}}
-             whileInView={{ opacity: 1, x:0 }}
-             viewport={{ once: true }}
-             transition={{ duration: 1, delay: 1 }}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 1 }}
               ref={mouseOverContainer}
               className="flex   w-1/3 items-center justify-center flex-col "
             >
-              <div ref={terminalRef} className=" h-[7%] w-full hidden border-[1px] border-b-0 border-cyan-dark rounded-t-xl  items-center">
+              <div
+                ref={terminalRef}
+                className=" h-[7%] w-full hidden border-[1px] border-b-0 border-cyan-dark rounded-t-xl  items-center"
+              >
                 {' '}
                 <p className="w-full text-center tracking-wider font-semibold">
                   Terminal
@@ -136,102 +189,105 @@ function About() {
                 className=" text-[1rem] bg-[#000]  shadow-custom  text-white font-bold overflow-hidden font-terminal w-full h-1/2 text-left flex flex-col gap-2  rounded-xl p-5"
               >
                 {inView && (
-          <>
-            <div className="flex w-full gap-2 text-[#d0d0d0]">
-              <p className="text-cyan">
-                nihal@desktop<span className="text-white">:</span>
-                <span className="text-violet-500">~</span>
-                <span className="text-white">$</span>
-              </p>
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .start()
-                    .pauseFor(1400)
-                    .typeString(' who am i')
-                    .pauseFor(700)
-                    .deleteChars(5)
-                    .pauseFor(1000)
-                    .typeString('ami');
-                }}
-                options={{
-                  loop: false,
-                  cursor: '█',
-                  delay: 100,
-                }}
-              />
-            </div>
+                  <>
+                    <div className="flex w-full gap-2 text-[#d0d0d0]">
+                      <p className="text-cyan">
+                        nihal@desktop<span className="text-white">:</span>
+                        <span className="text-violet-500">~</span>
+                        <span className="text-white">$</span>
+                      </p>
+                      <Typewriter
+                        onInit={(typewriter) => {
+                          typewriter
+                            .start()
+                            .pauseFor(1400)
+                            .typeString(' who am i')
+                            .pauseFor(700)
+                            .deleteChars(5)
+                            .pauseFor(1000)
+                            .typeString('ami');
+                        }}
+                        options={{
+                          loop: false,
+                          cursor: '█',
+                          delay: 100,
+                        }}
+                      />
+                    </div>
 
-            <div className="flex flex-col text-[#d0d0d0]">
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .start()
-                    .pauseFor(5500)
-                    .typeString('- web-developer');
-                }}
-                options={{
-                  loop: false,
-                  cursor: '',
-                  delay: 40,
-                }}
-              />
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter.start().pauseFor(6500).typeString('Skills:');
-                }}
-                options={{
-                  loop: false,
-                  cursor: '',
-                  delay: 40,
-                }}
-              />
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .start()
-                    .pauseFor(8500)
-                    .typeString(
-                      '- frontend: React.js, Astro, HTML, CSS, TailwindCSS, JavaScript'
-                    );
-                }}
-                options={{
-                  loop: false,
-                  cursor: '',
-                  delay: 40,
-                }}
-              />
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .start()
-                    .pauseFor(12000)
-                    .typeString(
-                      '- backend: Node.js, Express, MongoDB, MySQL, NestJS, WebSockets'
-                    );
-                }}
-                options={{
-                  loop: false,
-                  cursor: '',
-                  delay: 40,
-                }}
-              />
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .start()
-                    .pauseFor(15500)
-                    .typeString('- deployment: AWS, Dockers');
-                }}
-                options={{
-                  loop: false,
-                  cursor: '',
-                  delay: 40,
-                }}
-              />
-            </div>
-          </>
-        )}
+                    <div className="flex flex-col text-[#d0d0d0]">
+                      <Typewriter
+                        onInit={(typewriter) => {
+                          typewriter
+                            .start()
+                            .pauseFor(5500)
+                            .typeString('- web-developer');
+                        }}
+                        options={{
+                          loop: false,
+                          cursor: '',
+                          delay: 40,
+                        }}
+                      />
+                      <Typewriter
+                        onInit={(typewriter) => {
+                          typewriter
+                            .start()
+                            .pauseFor(6500)
+                            .typeString('Skills:');
+                        }}
+                        options={{
+                          loop: false,
+                          cursor: '',
+                          delay: 40,
+                        }}
+                      />
+                      <Typewriter
+                        onInit={(typewriter) => {
+                          typewriter
+                            .start()
+                            .pauseFor(8500)
+                            .typeString(
+                              '- frontend: React.js, Astro, HTML, CSS, TailwindCSS, JavaScript'
+                            );
+                        }}
+                        options={{
+                          loop: false,
+                          cursor: '',
+                          delay: 40,
+                        }}
+                      />
+                      <Typewriter
+                        onInit={(typewriter) => {
+                          typewriter
+                            .start()
+                            .pauseFor(12000)
+                            .typeString(
+                              '- backend: Node.js, Express, MongoDB, MySQL, NestJS, WebSockets'
+                            );
+                        }}
+                        options={{
+                          loop: false,
+                          cursor: '',
+                          delay: 40,
+                        }}
+                      />
+                      <Typewriter
+                        onInit={(typewriter) => {
+                          typewriter
+                            .start()
+                            .pauseFor(15500)
+                            .typeString('- deployment: AWS, Dockers');
+                        }}
+                        options={{
+                          loop: false,
+                          cursor: '',
+                          delay: 40,
+                        }}
+                      />
+                    </div>
+                  </>
+                )}
               </div>
             </motion.div>
           </div>

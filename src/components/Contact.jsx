@@ -18,8 +18,8 @@ function Contact() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('/api/sendMessage', data);
-      alert('Message sent successfully!');
+      const response = await axios.post('https://whatsapp-backend-1-r49o.onrender.com/api/sendMessage', data);
+      alert('Message sent successfully! :', response);
     } catch (error) {
       alert('Failed to send message.');
     }
