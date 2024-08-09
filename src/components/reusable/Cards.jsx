@@ -51,11 +51,11 @@ function Cards({ title, desc, github, liveLink, img, tools }) {
         initial={{ opacity: 0.2, scale: 0.9 }}
         whileInView={{ opacity: inView ? 1 : 0.2, scale:1}}
         exit={{ opacity: 0, scale: 0.9 }}
-        transition={{ delay: 0.3, transition:0.5 }}
+        transition={{ delay: 0.3, duration:0.5 }}
           ref={ref}
-          className="flex justify-start items-center h-[25rem] w-full gap-10 mb-24 border-[1.5px]  rounded-3xl backdrop-blur-xl  border-cyan-dark"
+          className="flex justify-start items-center h-[25rem] w-full gap-10 mb-24 border-[1.5px]  rounded-[4rem] overflow-hidden backdrop-blur-xl  border-cyan-dark"
         >
-          <motion.div   className="relative  h-full bg-gray-900 rounded-l-3xl cursor-pointer overflow-hidden">
+          <motion.div   className="relative  h-full bg-gray-900 rounded-l-[4rem] cursor-pointer overflow-hidden">
             <img src={img} className="w-full h-full object-cover " alt="" />
           </motion.div>
           <motion.div

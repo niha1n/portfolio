@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import dpImage from '../assets/avatar.png';
 import Typewriter from 'typewriter-effect';
-import { AnimatePresence, motion, useInView } from 'framer-motion';
+import { AnimatePresence, motion} from 'framer-motion';
 
 function About() {
 
@@ -84,7 +83,7 @@ function About() {
           </div> */}
 
           <div className="flex w-4/5 h-3/4 flex-row ">
-            <div className="flex w-2/3   pl-16 items-start justify-evenly flex-col gap-5">
+            <div className="flex w-2/3   pl-16 items-start justify-center flex-col gap-5">
               <div className="w-full h-fit flex items-center justify-start gap-3">
                 <AnimatePresence>
                 <motion.h2
@@ -110,6 +109,7 @@ function About() {
                     initial={{ y: 0 }}
                     whileInView={{ y: -50 }}
                     exit={{y:50}}
+                    viewport={{ once: true }}
                     transition={{ duration:0.4, delay: 1.5 }}
                     className="text-white inline-block overflow-clip relative text-5xl  font-mark-pro"
                   >
@@ -120,6 +120,7 @@ function About() {
                       initial={{ y: 50 }}
                       animate={{ y: inView?0:50 }}
                       exit={{y:50}}
+                      viewport={{ once: true }}
                       transition={{ duration:0.4, delay: 1.5 }}
                       className="text-[#66fcf1] absolute inline-block  text-5xl  font-mark-pro"
                     >
@@ -147,7 +148,7 @@ function About() {
                 whileInView={{ x: inView ? 0 : -100, opacity: inView ? 1 : 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
-                className=" font-montserrat w-[70%] text-grey"
+                className=" font-montserrat w-[70%] text-grey mt-10 "
               >
                 Hello, I'm Nihal N, a dedicated web developer from Kerala,
                 India. My passion lies in crafting intuitive and responsive web
@@ -162,7 +163,7 @@ function About() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.5, delay: 0.7 }}
-                class="w-[150px] border-[1px] border-cyan h-[50px] my-3 flex items-center justify-center rounded-3xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:border-0  before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-cyan before:to-cyan before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-cyan text-sm hover:text-dark font-montserrat tracking-wider"
+                class="w-[150px] border-[1px] border-cyan h-[50px] my-3 flex items-center justify-center rounded-3xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:border-0  before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-cyan before:to-cyan before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-cyan text-sm hover:text-dark font-montserrat tracking-wider mt-5"
               >
                 Get in Touch
               </motion.button>

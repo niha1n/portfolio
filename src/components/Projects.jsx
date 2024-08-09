@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Parallax from './reusable/Parallax';
 import projectData from '../assets/projects.json';
 import {
@@ -26,12 +26,34 @@ function Projects() {
   //   damping: 30,
   //   restDelta: 0.001,
   // });
+  const vantaRef = useRef(null);
+
+  useEffect(() => {
+    const vantaEffect = window.VANTA.NET({
+      el: vantaRef.current,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x45a29e,
+      backgroundColor: 0x0e0e0e,
+    });
+
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, []);
+
 
   return (
     <>
-      <div className="h-fit relative flex flex-col items-center overflow-y-scroll no-scrollbar justify-center bg-dark text-white">
+      <div  className="h-fit relative flex flex-col items-center overflow-y-scroll no-scrollbar justify-center bg-dark text-white">
         <div className="absolute top-0 z-50 w-full h-24 opacity-70 bg-gradient-to-b from-black  to-transparent"></div>
-
+        
+        <div ref={vantaRef} className="w-full h-full absolute z-10 opacity-20 "></div>
         <div className="absolute bottom-0 w-full h-24 z-50 bg-gradient-to-b from-transparent to-black"></div>
 
         <Parallax />
@@ -42,7 +64,6 @@ function Projects() {
           transition={{ duration: 0.3 }}
         ></motion.div>
         <div className="h-[100vh] w-full flex flex-col items-center justify-center">
-          {/* <div className="w-full h-screen"></div> */}
           <div
             ref={ref}
             className="w-full flex relative z-20 flex-col items-center justify-center"
