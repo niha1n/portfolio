@@ -19,6 +19,7 @@
     "react-scroll-motion": "^0.3.3",
     "react-scroll-parallax": "^3.4.5",
     "simple-parallax-js": "^6.0.1",
+    "three": "^0.167.1",
     "typewriter-effect": "^2.21.0",
     "web-vitals": "^2.1.4"
   },
