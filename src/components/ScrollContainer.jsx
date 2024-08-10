@@ -10,10 +10,11 @@ function ScrollContainer() {
   return (
     <>
     <ReactLenis root options={{ lerp: 3, duration: 2}}>
+      <div className="bg-[#0e0e0e]">
       <Landing />
       <About />
       <Projects />
-      <Contact />
+      <Contact /></div>
       </ReactLenis>
     </>
   );

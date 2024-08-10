@@ -57,17 +57,17 @@ function Contact() {
     <>
       <div
         ref={ref}
-        className="relative z-50 h-screen w-full justify-center items-center flex bg-landing-grad p-5"
+        className="relative z-50 h-[150vh] lg:h-screen w-full justify-center items-center flex bg-landing-grad p-5"
       >
         {inView && (
-          <div className="flex flex-col  w-4/5 h-4/5 p-5 justify-evenly">
-            <div className="flex gap-10 w-full items-center justify-center ">
+          <div className="flex flex-col  lg:w-4/5 h-4/5 p-5 justify-evenly">
+            <div className="flex flex-col lg:flex-row gap-10 w-full items-center lg:justify-center justify-between ">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="w-1/2 h-full flex flex-col relative  justify-start  gap-10  font-montserrat"
+                className="w-full lg:w-1/2 h-full flex flex-col relative items-center lg:items-start  justify-center  gap-10  font-montserrat"
               >
                 <motion.h1
                   initial={{ opacity: 0 }}
@@ -78,7 +78,7 @@ function Contact() {
                 >
                   Get in <span className="text-cyan">Touch</span>
                 </motion.h1>
-                <p className="text-white text-md w-4/5">
+                <p className="text-white text-md lg:w-4/5">
                   I'm always excited to connect and discuss new opportunities,
                   collaborations, or any projects you have in mind. Whether you
                   have a question, want to collaborate, or just want to say
@@ -97,7 +97,7 @@ function Contact() {
                   </a>
                 </div>
 
-                <button className="w-4/5 rounded-full border-[2px] border-cyan mt-5 py-2 text-cyan">
+                <button className="w-full lg:w-4/5 rounded-full border-[2px] border-cyan mt-5 py-2 text-cyan">
                   nihalnrasiya@gmail.com
                 </button>
               </motion.div>
@@ -107,7 +107,7 @@ function Contact() {
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.3 }}
                 onSubmit={handleSubmit(onSubmit)}
-                className="font-montserrat w-1/2 "
+                className="font-montserrat w-full lg:w-1/2 "
               >
                 <div className="mb-4">
                   <label className="block text-gray-200 ml-1">Name</label>

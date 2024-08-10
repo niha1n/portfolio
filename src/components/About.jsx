@@ -8,6 +8,8 @@ function About() {
   const mouseOverContainer = useRef(null);
   const ex1Layer = useRef(null);
   const terminalRef = useRef(null);
+  const visibilityRef = useRef(null);
+
 
 
   // const inView = useInView(terminalRef, { once: false, amount: 0 });
@@ -54,37 +56,32 @@ function About() {
         });
       },
       {
-        threshold: 0.8,
+        threshold: 0.5,
       }
     );
 
-    if (mouseOverContainer.current) {
-      observer.observe(mouseOverContainer.current);
+    if (visibilityRef.current) {
+      observer.observe(visibilityRef.current);
     }
 
     return () => {
-      if (mouseOverContainer.current) {
-        observer.unobserve(mouseOverContainer.current);
+      if (visibilityRef.current) {
+        observer.unobserve(visibilityRef.current);
       }
     };
   }, []);
   return (
     <>
-      <div className="h-[100vh] relative z-30 flex bg-landing-grad w-full  flex-col    text-white">
+      <div 
+              ref={visibilityRef} className="h-[150vh] lg:h-[100vh] relative z-30 flex bg-landing-grad w-full  flex-col    text-white">
         {/* <div className="absolute top-0 w-full h-24 bg-gradient-to-b from-dark  to-black"></div> */}
 
         {/* <div className="absolute bottom-0 w-full h-24 bg-gradient-to-b from-dark  to-black"></div> */}
         <div className="relative  flex flex-col h-full items-center justify-center">
-          {/* <div className="absolute top-8 flex w-full items-center gap-1">
-            <p className="font-normal font-terminal text-4xl pl-[10%]">
-              $ who<span className="text-[#66fcf1]">am</span>i
-            </p>
-            <div className="h-8 mb-1 w-4 bg-white animate-blink"></div>
-          </div> */}
 
-          <div className="flex w-4/5 h-3/4 flex-row ">
-            <div className="flex w-2/3   pl-16 items-start justify-center flex-col gap-5">
-              <div className="w-full h-fit flex items-center justify-start gap-3">
+          <div className="flex flex-col justify-between lg:flex-row w-4/5 h-3/4  ">
+            <div className="flex  lg:w-2/3   lg:pl-16 items-center lg:items-start justify-center flex-col gap-5">
+              <div className="w-full h-fit flex items-center justify-center lg:justify-start gap-3">
                 <AnimatePresence>
                 <motion.h2
                   initial={{ x: -100, opacity: 0 }}
@@ -148,7 +145,7 @@ function About() {
                 whileInView={{ x: inView ? 0 : -100, opacity: inView ? 1 : 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
-                className=" font-montserrat w-[70%] text-grey mt-10 "
+                className=" font-montserrat w-[90%] lg:w-[70%] text-grey mt-10 text-center lg:text-left"
               >
                 Hello, I'm Nihal N, a dedicated web developer from Kerala,
                 India. My passion lies in crafting intuitive and responsive web
@@ -174,11 +171,11 @@ function About() {
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 1 }}
               ref={mouseOverContainer}
-              className="flex   w-1/3 items-center justify-center flex-col "
+              className="flex   lg:w-1/3 items-center justify-center flex-col "
             >
               <div
                 ref={terminalRef}
-                className=" h-[7%] w-full hidden border-[1px] border-b-0 border-cyan-dark rounded-t-xl  items-center"
+                className="h-[7%] w-full hidden border-[1px] border-b-0 border-cyan-dark rounded-t-xl  items-center"
               >
                 {' '}
                 <p className="w-full text-center tracking-wider font-semibold">
@@ -187,7 +184,7 @@ function About() {
               </div>
               <div
                 ref={ex1Layer}
-                className=" text-[1rem] bg-[#000]  shadow-custom  text-white font-bold overflow-hidden font-terminal w-full h-1/2 text-left flex flex-col gap-2  rounded-xl p-5"
+                className=" text-[1rem] bg-[#000]  shadow-custom  text-white font-bold overflow-hidden font-terminal w-full h-[15rem] text-left flex flex-col gap-2  rounded-xl p-5"
               >
                 {inView && (
                   <>
@@ -221,33 +218,33 @@ function About() {
                         onInit={(typewriter) => {
                           typewriter
                             .start()
-                            .pauseFor(5500)
+                            .pauseFor(5600)
                             .typeString('- web-developer');
                         }}
                         options={{
                           loop: false,
                           cursor: '',
-                          delay: 40,
+                          delay: 10,
                         }}
                       />
                       <Typewriter
                         onInit={(typewriter) => {
                           typewriter
                             .start()
-                            .pauseFor(6500)
+                            .pauseFor(6000)
                             .typeString('Skills:');
                         }}
                         options={{
                           loop: false,
                           cursor: '',
-                          delay: 40,
+                          delay: 10,
                         }}
                       />
                       <Typewriter
                         onInit={(typewriter) => {
                           typewriter
                             .start()
-                            .pauseFor(8500)
+                            .pauseFor(6300)
                             .typeString(
                               '- frontend: React.js, Astro, HTML, CSS, TailwindCSS, JavaScript'
                             );
@@ -255,14 +252,14 @@ function About() {
                         options={{
                           loop: false,
                           cursor: '',
-                          delay: 40,
+                          delay: 10,
                         }}
                       />
                       <Typewriter
                         onInit={(typewriter) => {
                           typewriter
                             .start()
-                            .pauseFor(12000)
+                            .pauseFor(7500)
                             .typeString(
                               '- backend: Node.js, Express, MongoDB, MySQL, NestJS, WebSockets'
                             );
@@ -270,20 +267,20 @@ function About() {
                         options={{
                           loop: false,
                           cursor: '',
-                          delay: 40,
+                          delay: 10,
                         }}
                       />
                       <Typewriter
                         onInit={(typewriter) => {
                           typewriter
                             .start()
-                            .pauseFor(15500)
+                            .pauseFor(8600)
                             .typeString('- deployment: AWS, Dockers');
                         }}
                         options={{
                           loop: false,
                           cursor: '',
-                          delay: 40,
+                          delay: 10,
                         }}
                       />
                     </div>

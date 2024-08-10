@@ -5,7 +5,8 @@
     "tools": "React.js, TailwindCSS, Node.js, Express",
     "github": "www.github.com",
     "live": "www.google.com",
-    "img": "/projectImages/avatar.png"
+    "img": "/projectImages/avatar.png",
+    "domains":["UI/UX", "Frontend","Backend"]
   },
   {
     "title": "Support Ticket Application",
@@ -13,7 +14,8 @@
     "tools": "React.js, TailwindCSS, Node.js, Express",
     "github": "www.github.com",
     "live": "www.google.com",
-    "img": "/projectImages/avatar.png"
+    "img": "/projectImages/avatar.png",
+    "domains":["UI/UX", "Frontend","Backend"]
   },
   {
     "title": "Support Ticket Application",
@@ -21,7 +23,8 @@
     "tools": "React.js, TailwindCSS, Node.js, Express",
     "github": "www.github.com",
     "live": "https://www.google.com",
-    "img": "/projectImages/avatar.png"
+    "img": "/projectImages/avatar.png",
+    "domains":["UI/UX", "Frontend","Backend"]
   },
   {
     "title": "Support Ticket Application",
@@ -29,7 +32,8 @@
     "tools": "React.js, TailwindCSS, Node.js, Express",
     "github": "www.github.com",
     "live": "www.google.com",
-    "img": "/projectImages/avatar.png"
+    "img": "/projectImages/avatar.png",
+    "domains":["UI/UX", "Frontend","Backend"]
   },
   {
     "title": "Support Ticket Application",
@@ -37,6 +41,7 @@
     "tools": "React.js, TailwindCSS, Node.js, Express",
     "github": "www.github.com",
     "live": "www.google.com",
-    "img": "/projectImages/avatar.png"
+    "img": "/projectImages/avatar.png",
+    "domains":["UI/UX", "Frontend","Backend"]
   }
 ]

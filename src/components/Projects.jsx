@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Parallax from './reusable/Parallax';
 import projectData from '../assets/projects.json';
 import {
@@ -15,46 +15,67 @@ function Projects() {
   const blurRef = useRef(null);
 
   const inView = useInView(ref, { once: false, amount: 0 });
-  // const blurInView = useInView(blurRef, { once: false, amount: 0.5 });
   const { scrollYProgress } = useScroll();
+  // const vantaRef = useRef(null);
 
-  // const blurOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.3]);
-  // const blur = useTransform(scrollYProgress, [0, 1], ['0px', '10px']);
+  // useEffect(() => {
+  //   const vantaEffect = window.VANTA.NET({
+  //     el: vantaRef.current,
+  //     mouseControls: true,
+  //     touchControls: true,
+  //     gyroControls: true,
+  //     minHeight: 100.00,
+  //     minWidth: 100.00,
+  //     scale: 1.00,
+  //     scaleMobile: 1.00,
+  //     color: 0x45a29e,
+  //     backgroundColor: 0x0e0e0e,
+  //   });
 
-  // const scaleX = useSpring(scrollYProgress, {
-  //   stiffness: 100,
-  //   damping: 30,
-  //   restDelta: 0.001,
-  // });
-  const vantaRef = useRef(null);
+  //   return () => {
+  //     if (vantaEffect) vantaEffect.destroy();
+  //   };
+  // }, []);
+  // console.log(projectData)
 
-  useEffect(() => {
-    const vantaEffect = window.VANTA.NET({
-      el: vantaRef.current,
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: true,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x45a29e,
-      backgroundColor: 0x0e0e0e,
-    });
+  // const [isVisible, setisVisible] = useState(false);
 
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, []);
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           setisVisible(true);
+  //           observer.disconnect();
+  //         }
+  //       });
+  //     },
+  //     {
+  //       threshold: 0.8,
+  //     }
+  //   );
+
+  //   if (ref.current) {
+  //     observer.observe(ref.current);
+  //   }
+
+  //   return () => {
+  //     if (ref.current) {
+  //       observer.unobserve(ref.current);
+  //     }
+  //   };
+  // }, []);
 
 
   return (
     <>
-      <div  className="h-fit relative flex flex-col items-center overflow-y-scroll no-scrollbar justify-center bg-dark text-white">
+      <div  className="h-fit relative flex flex-col items-center overflow-y-scroll no-scrollbar justify-center  text-white">
         <div className="absolute top-0 z-50 w-full h-24 opacity-70 bg-gradient-to-b from-black  to-transparent"></div>
         
-        <div ref={vantaRef} className="w-full h-full absolute z-10 opacity-20 "></div>
-        <div className="absolute bottom-0 w-full h-24 z-50 bg-gradient-to-b from-transparent to-black"></div>
+        
+          <div className="absolute bottom-0 w-full h-24 z-50 bg-gradient-to-b from-transparent to-black"></div>
+        
+        
 
         <Parallax />
         <motion.div
@@ -64,10 +85,14 @@ function Projects() {
           transition={{ duration: 0.3 }}
         ></motion.div>
         <div className="h-[100vh] w-full flex flex-col items-center justify-center">
+          
           <div
             ref={ref}
             className="w-full flex relative z-20 flex-col items-center justify-center"
           >
+           
+            {/* <div ref={vantaRef} className={`${isVisible?'opacity-20':'opacity-0'} w-full h-full fixed top-[5%] z-[-10] opacity-20`} ></div> */}
+          
             <AnimatePresence>
               <div
                 className={`${
@@ -77,7 +102,7 @@ function Projects() {
                 <motion.div
                   transition={{ duration: 0.7 }}
                   style={{ x: '-25vw', opacity: inView ? 0.5 : 0 }}
-                  className="text-cyan pr-3 text-[7rem] text-stroke"
+                  className="text-cyan pr-3 text-[2.3rem] lg:text-[7rem] text-stroke"
                 >
                   some of
                 </motion.div>
@@ -89,13 +114,13 @@ function Projects() {
               >
                 <motion.div
                   transition={{ duration: 0.7 }}
-                  className="text-cyan font-semibold pl-3 text-[7rem]"
+                  className="text-cyan font-semibold pl-3 text-[2.3rem] lg:text-[7rem]"
                   style={{
                     x: '25vw',
                     opacity: inView ? 0.5 : 0,
                   }}
                 >
-                  <span className="text-stroke font-normal">my</span> works...
+                  <span className="text-stroke font-normal">my</span> works
                 </motion.div>
               </div>
             </AnimatePresence>
@@ -107,7 +132,8 @@ function Projects() {
         >
           <div className="relative w-full h-full flex flex-col gap-10 z-30">
             {projectData.map((project, index) => {
-              return <Cards key={index} title={project.title} desc={project.desc} img={project.img} tools={project.tools} liveLink={project.live} />;
+              
+              return <Cards key={index} title={project.title} desc={project.desc} img={project.img} tools={project.tools} liveLink={project.live} domains={project.domains} />;
             })}
           </div>
         </div>
