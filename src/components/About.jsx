@@ -73,7 +73,7 @@ function About() {
   return (
     <>
       <div 
-              ref={visibilityRef} className="h-[150vh] lg:h-[100vh] relative z-30 flex bg-landing-grad w-full  flex-col    text-white">
+              ref={visibilityRef} className="h-[150vh] lg:h-[100vh] relative z-30 flex bg-landing-grad w-full  flex-col  text-white">
         {/* <div className="absolute top-0 w-full h-24 bg-gradient-to-b from-dark  to-black"></div> */}
 
         {/* <div className="absolute bottom-0 w-full h-24 bg-gradient-to-b from-dark  to-black"></div> */}

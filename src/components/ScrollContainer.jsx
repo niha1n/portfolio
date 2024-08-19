@@ -11,6 +11,8 @@ function ScrollContainer() {
     <>
     <ReactLenis root options={{ lerp: 3, duration: 2}}>
       <div className="bg-[#0e0e0e]">
+      <img src="logo.svg" className='fixed z-[100] w-20 top-5 left-10' alt="" />
+
       <Landing />
       <About />
       <Projects />

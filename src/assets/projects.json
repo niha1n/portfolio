@@ -1,47 +1,30 @@
 [
   {
-    "title": "Support Ticket Application",
-    "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quisquam dolor quidem eius accusamus, dolorum molestiae aperiam porro dolorem error adipisci debitis eum eligendi corrupti? Reiciendis ducimus consectetur animi enim?",
-    "tools": "React.js, TailwindCSS, Node.js, Express",
+    "title": "IEDC Website Re-imagined",
+    "desc": "Redesigned and developed the IEDC website using AstroJS as part of an internship task for Kerala Startup Mission.",
+    "tools": "Astro JS, TailwindCSS",
     "github": "www.github.com",
-    "live": "www.google.com",
-    "img": "/projectImages/avatar.png",
-    "domains":["UI/UX", "Frontend","Backend"]
+    "live": "https://iedc-demo.netlify.app",
+    "img": "/projectImages/iedc.svg",
+    "domains":["UI/UX", "Frontend"]
   },
   {
     "title": "Support Ticket Application",
-    "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quisquam dolor quidem eius accusamus, dolorum molestiae aperiam porro dolorem error adipisci debitis eum eligendi corrupti? Reiciendis ducimus consectetur animi enim?",
-    "tools": "React.js, TailwindCSS, Node.js, Express",
+    "desc": "A highly efficient support ticket application using React.js, Node.js, Express,  and MongoDB, resulting in a 50% decrease in customer support response time and a 25% increase in customer satisfaction.",
+    "tools": "React.js, Node.js, MongoDB, Express",
     "github": "www.github.com",
-    "live": "www.google.com",
-    "img": "/projectImages/avatar.png",
+    "live": "https://peppy-marigold-86aa2f.netlify.app",
+    "img": "/projectImages/support.svg",
     "domains":["UI/UX", "Frontend","Backend"]
   },
   {
-    "title": "Support Ticket Application",
-    "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quisquam dolor quidem eius accusamus, dolorum molestiae aperiam porro dolorem error adipisci debitis eum eligendi corrupti? Reiciendis ducimus consectetur animi enim?",
-    "tools": "React.js, TailwindCSS, Node.js, Express",
+    "title": "DRUMP",
+    "desc": " 'DRUMP' is a web application that brings you a curated selection of random quotes from former President Donald Trump, presented in a familiar tweet format. Delve into the unpredictable and often amusing world of his quotes as you explore the essence of his unique communication style.",
+    "tools": "React.js, TailwindCSS, TronaldDump API",
     "github": "www.github.com",
-    "live": "https://www.google.com",
-    "img": "/projectImages/avatar.png",
-    "domains":["UI/UX", "Frontend","Backend"]
-  },
-  {
-    "title": "Support Ticket Application",
-    "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quisquam dolor quidem eius accusamus, dolorum molestiae aperiam porro dolorem error adipisci debitis eum eligendi corrupti? Reiciendis ducimus consectetur animi enim?",
-    "tools": "React.js, TailwindCSS, Node.js, Express",
-    "github": "www.github.com",
-    "live": "www.google.com",
-    "img": "/projectImages/avatar.png",
-    "domains":["UI/UX", "Frontend","Backend"]
-  },
-  {
-    "title": "Support Ticket Application",
-    "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quisquam dolor quidem eius accusamus, dolorum molestiae aperiam porro dolorem error adipisci debitis eum eligendi corrupti? Reiciendis ducimus consectetur animi enim?",
-    "tools": "React.js, TailwindCSS, Node.js, Express",
-    "github": "www.github.com",
-    "live": "www.google.com",
-    "img": "/projectImages/avatar.png",
-    "domains":["UI/UX", "Frontend","Backend"]
+    "live": "https://effortless-paprenjak-9ccc7a.netlify.app",
+    "img": "/projectImages/drump.svg",
+    "domains":["UI/UX", "Frontend"]
   }
 ]
+  

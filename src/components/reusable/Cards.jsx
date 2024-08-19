@@ -5,7 +5,7 @@ import {
   useScroll,
   useTransform,
 } from 'framer-motion';
-import image from '../../assets/27470334_7309681.jpg';
+import redirect from '../../assets/redirect.png';
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -44,6 +44,10 @@ function Cards({ title, desc, github, liveLink, img, tools, domains }) {
     };
   }, []);
 
+  const handleRedirect = () => {
+    window.open(liveLink, '_blank');
+  };
+
   return (
     <>
       <AnimatePresence>
@@ -53,14 +57,20 @@ function Cards({ title, desc, github, liveLink, img, tools, domains }) {
           exit={{ opacity: 0, scale: 0.9 }}
           transition={{ delay: 0.3, duration: 0.5 }}
           ref={ref}
-          className="flex flex-col lg:flex-row justify-start items-center h-[80vh] lg:h-[25rem] w-full gap-10 mb-24 border-[3px]  rounded-3xl overflow-hidden backdrop-blur-xl  border-cyan-dark"
+          className="flex flex-col lg:flex-row justify-start items-center h-[80vh] lg:h-[25rem] w-full gap-10 mb-24 border-[3px]  rounded-3xl overflow-hidden backdrop-blur-xl  border-cyan relative"
         >
-          <motion.div className="relative w-full lg:w-auto h-full bg-gray-900 lg:rounded-l-3xl cursor-pointer overflow-hidden">
-            <img
-              src="logo192.png"
-              className="w-full h-full object-cover "
-              alt=""
-            />
+          <div
+            onClick={handleRedirect}
+            className="absolute w-10 top-0 right-0  p-2 rounded-bl-md bg-cyan z-[50]"
+          >
+            <img src={redirect} className="w-full bg-cyan" alt="" />
+          </div>
+
+          <motion.div
+            className="relative w-full lg:w-1/3 h-full bg-gray-900 lg:rounded-l-3xl cursor-pointer overflow-hidden"
+            style={{ willChange: 'transform' }}
+          >
+            <img src={img} className="w-full h-full object-cover " alt="" />
           </motion.div>
           <motion.div
             className={`relative h-fit lg:h-[50vh] flex flex-col justify-center gap-3 lg:gap-5 lg:w-[45rem] px-5 pb-5`}
@@ -84,7 +94,7 @@ function Cards({ title, desc, github, liveLink, img, tools, domains }) {
                       x: inView ? 0 : 20,
                     }}
                     exit={{ opacity: 0 }}
-                    transition={{ delay: 0.5 + id*0.1 }}
+                    transition={{ delay: 0.5 + id * 0.1 }}
                     href={liveLink}
                     className="border-[1.5px] border-cyan w-fit py-1 px-3 text-cyan rounded-md mb-3"
                   >
@@ -119,7 +129,7 @@ function Cards({ title, desc, github, liveLink, img, tools, domains }) {
               transition={{ delay: 0.35 }}
               className="text-white text-sm lg:text-md"
             >
-              <span className="font-bold text-lg">Description: </span> {desc}
+              <span className="font-bold text-lg">Description : </span> {desc}
             </motion.p>
           </motion.div>
         </motion.div>
