@@ -61,7 +61,7 @@ function Cards({ title, desc, github, liveLink, img, tools, domains }) {
         >
           <div
             onClick={handleRedirect}
-            className="absolute w-10 top-0 right-0  p-2 rounded-bl-md bg-cyan z-[50]"
+            className="absolute w-10 top-0 right-0  p-2 rounded-bl-md bg-cyan z-[50] cursor-pointer"
           >
             <img src={redirect} className="w-full bg-cyan" alt="" />
           </div>

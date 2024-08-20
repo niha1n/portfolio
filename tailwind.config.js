@@ -15,6 +15,7 @@ module.exports = {
       },
       boxShadow:{
         'custom': 'rgb(69,162,158,0.7) 3px 10px 20px, rgb(69,162,158,0.3) 0px 0px 60px ',
+        'navbar': 'rgb(0,0,0,0.8) 0px 5px 10px',
       },
       animation: {
         rotate: 'rotate 10s linear infinite',

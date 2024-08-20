@@ -1,16 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Typewriter from 'typewriter-effect';
-import { AnimatePresence, motion} from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 function About() {
-
   const constrain = 700;
   const mouseOverContainer = useRef(null);
   const ex1Layer = useRef(null);
   const terminalRef = useRef(null);
   const visibilityRef = useRef(null);
-
-
 
   // const inView = useInView(terminalRef, { once: false, amount: 0 });
 
@@ -72,71 +69,75 @@ function About() {
   }, []);
   return (
     <>
-      <div 
-              ref={visibilityRef} className="h-[150vh] lg:h-[100vh] relative z-30 flex bg-landing-grad w-full  flex-col  text-white">
+      <div
+      id='about'
+        ref={visibilityRef}
+        className="h-[150vh] lg:h-[100vh] relative z-30 flex bg-landing-grad w-full  flex-col  text-white"
+      >
         {/* <div className="absolute top-0 w-full h-24 bg-gradient-to-b from-dark  to-black"></div> */}
 
         {/* <div className="absolute bottom-0 w-full h-24 bg-gradient-to-b from-dark  to-black"></div> */}
         <div className="relative  flex flex-col h-full items-center justify-center">
-
           <div className="flex flex-col justify-between lg:flex-row w-4/5 h-3/4  ">
             <div className="flex  lg:w-2/3   lg:pl-16 items-center lg:items-start justify-center flex-col gap-5">
               <div className="w-full h-fit flex items-center justify-center lg:justify-start gap-3">
                 <AnimatePresence>
-                <motion.h2
-                  initial={{ x: -100, opacity: 0 }}
-                  whileInView={{
-                    x: inView ? 0 : -100,
-                    opacity: inView ? 1 : 0,
-                  }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7 }}
-                  className="text-5xl  font-mark-pro  text-white overflow-hidden"
-                >
-                  about{' '}
-                </motion.h2>
-                <motion.div initial={{ x: -100, opacity: 0 }}
-                  whileInView={{
-                    x: inView ? 0 : -100,
-                    opacity: inView ? 1 : 0,
-                  }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7 }} className="flex w-fit justify-center items-center relative z-50 overflow-hidden">
-                  <motion.span
-                    initial={{ y: 0 }}
-                    whileInView={{ y: -50 }}
-                    exit={{y:50}}
+                  <motion.h2
+                    initial={{ x: -100, opacity: 0 }}
+                    whileInView={{
+                      x: inView ? 0 : -100,
+                      opacity: inView ? 1 : 0,
+                    }}
                     viewport={{ once: true }}
-                    transition={{ duration:0.4, delay: 1.5 }}
-                    className="text-white inline-block overflow-clip relative text-5xl  font-mark-pro"
+                    transition={{ duration: 0.7 }}
+                    className="text-5xl  font-mark-pro  text-white overflow-hidden"
                   >
-                    me{' '}
-                    
-                  </motion.span>{' '}
-                  <motion.span
-                      initial={{ y: 50 }}
-                      animate={{ y: inView?0:50 }}
-                      exit={{y:50}}
+                    about{' '}
+                  </motion.h2>
+                  <motion.div
+                    initial={{ x: -100, opacity: 0 }}
+                    whileInView={{
+                      x: inView ? 0 : -100,
+                      opacity: inView ? 1 : 0,
+                    }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7 }}
+                    className="flex w-fit justify-center items-center relative z-50 overflow-hidden"
+                  >
+                    <motion.span
+                      initial={{ y: 0 }}
+                      whileInView={{ y: -50 }}
+                      exit={{ y: 50 }}
                       viewport={{ once: true }}
-                      transition={{ duration:0.4, delay: 1.5 }}
+                      transition={{ duration: 0.4, delay: 1.5 }}
+                      className="text-white inline-block overflow-clip relative text-5xl  font-mark-pro"
+                    >
+                      me{' '}
+                    </motion.span>{' '}
+                    <motion.span
+                      initial={{ y: 50 }}
+                      animate={{ y: inView ? 0 : 50 }}
+                      exit={{ y: 50 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 1.5 }}
                       className="text-[#66fcf1] absolute inline-block  text-5xl  font-mark-pro"
                     >
                       me
                     </motion.span>
                   </motion.div>
                   <motion.h2
-                  initial={{ x: -100, opacity: 0 }}
-                  whileInView={{
-                    x: inView ? 0 : -100,
-                    opacity: inView ? 1 : 0,
-                  }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7 }}
-                  className="text-5xl  font-mark-pro  text-white overflow-hidden"
-                >
-                 {' '}
-                  ?
-                </motion.h2>
+                    initial={{ x: -100, opacity: 0 }}
+                    whileInView={{
+                      x: inView ? 0 : -100,
+                      opacity: inView ? 1 : 0,
+                    }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7 }}
+                    className="text-5xl  font-mark-pro  text-white overflow-hidden"
+                  >
+                    {' '}
+                    ?
+                  </motion.h2>
                 </AnimatePresence>
               </div>
 

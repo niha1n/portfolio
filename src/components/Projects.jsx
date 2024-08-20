@@ -69,7 +69,7 @@ function Projects() {
 
   return (
     <>
-      <div  className="h-fit relative flex flex-col items-center overflow-y-scroll no-scrollbar justify-center  text-white">
+      <div id='work'  className="h-fit relative flex flex-col items-center overflow-y-scroll no-scrollbar justify-center  text-white">
         <div className="absolute top-0 z-50 w-full h-24 opacity-70 bg-gradient-to-b from-black  to-transparent"></div>
         
         

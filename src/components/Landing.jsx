@@ -35,7 +35,7 @@ function Landing() {
 
   return (
     
-    <div className=" h-[95vh] flex items-center w-full  flex-col  justify-center p-5 relative z-0">
+    <div id='home' className=" h-[95vh] flex items-center w-full  flex-col  justify-center p-5 relative z-0">
 
       <div className="absolute bottom-0 w-full h-24 z-50 bg-gradient-to-b from-transparent opacity-70 to-[#000000]"></div>
       <motion.div

@@ -17,6 +17,7 @@
     "react-hook-form": "^7.52.1",
     "react-intersection-observer": "^9.13.0",
     "react-scripts": "5.0.1",
+    "react-scroll": "^1.9.0",
     "react-scroll-motion": "^0.3.3",
     "react-scroll-parallax": "^3.4.5",
     "simple-parallax-js": "^6.0.1",
