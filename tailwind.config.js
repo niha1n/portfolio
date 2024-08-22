@@ -10,6 +10,9 @@ module.exports = {
         'd-din': ['D-DIN Condensed', 'sans-serif'],
         terminal: ['Ubuntu Mono', 'monospace'],
       },
+      dropShadow: {
+        'custom': '0px 5px 10px rgba(0, 0, 0, 0.8)',
+      },
       backgroundImage: {
         'landing-grad': 'radial-gradient(circle, #0b0b0b 50%, rgba(0,0,0,1) 100%);',
       },
@@ -20,6 +23,7 @@ module.exports = {
       animation: {
         rotate: 'rotate 10s linear infinite',
         blink: 'blink 0.7s infinite',
+        'move-up-down': 'move-up-down 0.8s ease-in-out infinite',
       },
       colors: {
         cyan: '#66fcf1',
@@ -35,6 +39,10 @@ module.exports = {
         },
         blink: {
           '0%': { opacity: 0 },
+        },
+        'move-up-down': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-5px)' },
         },
       },
     },

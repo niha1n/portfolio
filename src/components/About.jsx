@@ -72,7 +72,7 @@ function About() {
       <div
       id='about'
         ref={visibilityRef}
-        className="h-[150vh] lg:h-[100vh] relative z-30 flex bg-landing-grad w-full  flex-col  text-white"
+        className="h-fit py-32 lg:py-0 lg:h-[100vh] relative z-30 flex bg-landing-grad w-full  flex-col  text-white overflow-hidden"
       >
         {/* <div className="absolute top-0 w-full h-24 bg-gradient-to-b from-dark  to-black"></div> */}
 
@@ -172,7 +172,7 @@ function About() {
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 1 }}
               ref={mouseOverContainer}
-              className="flex   lg:w-1/3 items-center justify-center flex-col "
+              className="flex   lg:w-1/3 items-center justify-center flex-col mt-20 lg:mt-0"
             >
               <div
                 ref={terminalRef}
