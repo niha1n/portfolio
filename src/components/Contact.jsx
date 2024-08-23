@@ -59,7 +59,6 @@ function Contact() {
           <div className="flex flex-col lg:w-4/5 h-4/5 p-5 justify-evenly">
             <div className="flex flex-col gap-5 lg:gap-10 w-full items-center lg:justify-center justify-between">
               <div
-
                 className="w-full h-full flex flex-col relative items-center justify-center  font-montserrat"
               >
                 <motion.h1
@@ -67,7 +66,7 @@ function Contact() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="text-3xl lg:text-5xl text-white font-mark-pro text-center w-full"
+                  className="text-3xl md:text-5xl text-white font-mark-pro text-center w-full"
                 >
                   Get in <span className="text-cyan">Touch</span>
                 </motion.h1>
@@ -100,7 +99,7 @@ function Contact() {
                       id="name"
                       type="text"
                       name="name"
-                      className="mt-1 text-white bg-gray-800 p-2 w-full  rounded-md"
+                      className="mt-1 text-white bg-gray-800 p-2 w-full  rounded-md focus:outline-none"
                       placeholder="Your name"
                       autoComplete="off"
                     />
@@ -124,7 +123,7 @@ function Contact() {
                       id="email"
                       type="email"
                       name="email"
-                      className="mt-1 text-white bg-gray-800 p-2 w-full  rounded-md"
+                      className="mt-1 text-white bg-gray-800 p-2 w-full  rounded-md focus:outline-none"
                       placeholder="Your email"
                       autoComplete="off"
                     />
@@ -149,7 +148,7 @@ function Contact() {
                     id="subject"
                     type="text"
                     name="subject"
-                    className="mt-1 text-white bg-gray-800 p-2 w-full  rounded-md"
+                    className="mt-1 text-white bg-gray-800 p-2 w-full  rounded-md focus:outline-none"
                     placeholder="Subject"
                     autoComplete="off"
                   />
@@ -172,7 +171,7 @@ function Contact() {
                   <textarea
                     id="message"
                     name="message"
-                    className="mt-1 text-white bg-gray-800 p-2 w-full  rounded-md"
+                    className="mt-1 text-white bg-gray-800 p-2 w-full  rounded-md focus:outline-none"
                     placeholder="Your message"
                   />
                   <ValidationError

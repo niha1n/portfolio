@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Link } from 'react-scroll';
+import contact from '../assets/navIcons/contact.png';
 
 function About() {
   const constrain = 700;
@@ -156,6 +158,7 @@ function About() {
                 abreast of the latest industry trends. Beyond coding, I immerse
                 myself in diverse tech projects, always expanding my expertise.
               </motion.p>
+              <Link to="contact" spy={true} smooth={true} duration={1000}>
               <motion.button
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -163,8 +166,10 @@ function About() {
                 transition={{ duration: 1.5, delay: 0.7 }}
                 class="w-[150px] border-[1px] border-cyan h-[50px] my-3 flex items-center justify-center rounded-3xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:border-0  before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-cyan before:to-cyan before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-cyan text-sm hover:text-dark font-montserrat tracking-wider mt-5"
               >
+                
                 Get in Touch
-              </motion.button>
+              
+              </motion.button></Link>
             </div>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
