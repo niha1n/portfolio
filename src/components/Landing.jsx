@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import NavBtn from './reusable/NavBtn';
 import Typewriter from 'typewriter-effect';
 import email from '../assets/email.png';
@@ -17,25 +17,29 @@ function Landing() {
   ];
 
   const vantaRef = useRef(null);
-
+  const [vantaEffect, setVantaEffect] = useState(null);
+  
   useEffect(() => {
-    const vantaEffect = window.VANTA.NET({
-      el: vantaRef.current,
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: true,
-      minHeight: 200.0,
-      minWidth: 200.0,
-      scale: 1.0,
-      scaleMobile: 1.0,
-      color: 0x45a29e,
-      backgroundColor: 0x0e0e0e,
-    });
-
+    if (!vantaEffect) {
+      const effect = window.VANTA.NET({
+        el: vantaRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: true,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x45a29e,
+        backgroundColor: 0x0e0e0e,
+      });
+      setVantaEffect(effect);
+    }
+  
     return () => {
       if (vantaEffect) vantaEffect.destroy();
     };
-  }, []);
+  }, [vantaEffect]);
 
   return (
     <div
@@ -49,7 +53,7 @@ function Landing() {
         animate={{ scale: 1, opacity: 0.2 }} // Added opacity here
         transition={{ duration: 1 }}
         ref={vantaRef}
-        className="fixed top-0 left-0 right-0 bottom-0 w-full h-full z-0" // Fixed position
+        style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, width: '100%', height: '100%', zIndex: 0 }}
       ></motion.div>
 
       <div className="relative w-[90%] lg:w-[80%] p-[1.5px] flex h-[30rem] z-10 rounded-l-full rounded-tr-full overflow-hidden shadow-navbar">
