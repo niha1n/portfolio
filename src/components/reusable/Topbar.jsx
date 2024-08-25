@@ -10,11 +10,11 @@ function Topbar() {
           spy={true}
           smooth={true}
           duration={1000}
-          className="h-full w-auto"
+          className="h-full w-auto cursor-pointer"
         >
           <img
             src="logo.svg"
-            className="h-full lg:w-20 w-auto drop-shadow-custom"
+            className="h-full lg:w-20 w-auto drop-shadow-custom "
             alt="Logo"
           />
         </Link>

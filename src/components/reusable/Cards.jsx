@@ -67,7 +67,7 @@ function Cards({ title, desc, github, liveLink, img, tools, domains }) {
           </div>
 
           <motion.div
-            className="relative w-full lg:w-1/3 h-full bg-gray-900 lg:rounded-l-3xl cursor-pointer overflow-hidden"
+            className="relative w-full lg:w-[50%] xl:w-1/3 h-full bg-gray-900 lg:rounded-l-3xl cursor-pointer overflow-hidden"
             style={{ willChange: 'transform' }}
           >
             <img src={img} className="w-full h-full object-cover " alt="" />

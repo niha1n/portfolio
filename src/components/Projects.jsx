@@ -102,7 +102,7 @@ function Projects() {
                 <motion.div
                   transition={{ duration: 0.7 }}
                   style={{ x: '-25vw', opacity: inView ? 0.5 : 0 }}
-                  className="text-cyan pr-3 text-[2.3rem] md:text-[4rem] lg:text-[7rem] text-stroke"
+                  className="text-cyan pr-3 text-[2.2rem] md:text-[4rem] lg:text-[5rem] xl:text-[7rem] text-stroke"
                 >
                   some of
                 </motion.div>
@@ -114,7 +114,7 @@ function Projects() {
               >
                 <motion.div
                   transition={{ duration: 0.7 }}
-                  className="text-cyan font-semibold pl-3 text-[2.3rem] md:text-[4rem] lg:text-[7rem]"
+                  className="text-cyan font-semibold pl-3 text-[2.2rem] md:text-[4rem] lg:text-[5rem] xl:text-[7rem]"
                   style={{
                     x: '25vw',
                     opacity: inView ? 0.5 : 0,

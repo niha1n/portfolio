@@ -57,7 +57,7 @@ function Contact() {
         
         {inView && (
           <div className="flex flex-col lg:w-4/5 h-4/5 p-5 justify-evenly">
-            <div className="flex flex-col gap-5 lg:gap-10 w-full items-center lg:justify-center justify-between">
+            <div className="flex flex-col gap-5 xl:gap-10 w-full items-center lg:justify-center justify-between">
               <div
                 className="w-full h-full flex flex-col relative items-center justify-center  font-montserrat"
               >
@@ -66,14 +66,14 @@ function Contact() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="text-3xl md:text-5xl text-white font-mark-pro text-center w-full"
+                  className="text-3xl xl:text-5xl text-white font-mark-pro text-center w-full"
                 >
                   Get in <span className="text-cyan">Touch</span>
                 </motion.h1>
                 <motion.p   initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5,delay:0.3 }} className="text-white text-md lg:text-2xl lg:w-4/5 text-center mt-5 lg:mt-9">
+                  transition={{ duration: 0.5,delay:0.3 }} className="text-white text-md lg:text-lg xl:text-2xl lg:w-4/5 text-center mt-4 xl:mt-9">
                   Whether you have a question, want to collaborate, or just want
                   to say hello, feel free to reach out!
                 </motion.p>
@@ -81,7 +81,7 @@ function Contact() {
               
               <form
                 onSubmit={handleSubmit}
-                className="font-montserrat w-full lg:w-2/3"
+                className="font-montserrat w-full lg:w-3/4 xl:w-2/3"
               >
                 <div className="flex flex-col lg:flex-row w-full items-center justify-center lg:gap-6">
                   <div className="mb-4 lg:w-1/3 w-full overflow-hidden">

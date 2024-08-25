@@ -69,6 +69,8 @@ function About() {
       }
     };
   }, []);
+
+  
   return (
     <>
       <div
@@ -92,7 +94,7 @@ function About() {
                     }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7 }}
-                    className="text-5xl  font-mark-pro  text-white overflow-hidden"
+                    className=" text-4xl xl:text-5xl  font-mark-pro  text-white overflow-hidden"
                   >
                     about{' '}
                   </motion.h2>
@@ -112,7 +114,7 @@ function About() {
                       exit={{ y: 50 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: 1.5 }}
-                      className="text-white inline-block overflow-clip relative text-5xl  font-mark-pro"
+                      className="text-white inline-block overflow-clip relative text-4xl xl:text-5xl  font-mark-pro"
                     >
                       me{' '}
                     </motion.span>{' '}
@@ -122,7 +124,7 @@ function About() {
                       exit={{ y: 50 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: 1.5 }}
-                      className="text-[#66fcf1] absolute inline-block  text-5xl  font-mark-pro"
+                      className="text-[#66fcf1] absolute inline-block  text-4xl xl:text-5xl  font-mark-pro"
                     >
                       me
                     </motion.span>
@@ -135,7 +137,7 @@ function About() {
                     }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7 }}
-                    className="text-5xl  font-mark-pro  text-white overflow-hidden"
+                    className="text-4xl xl:text-5xl  font-mark-pro  text-white overflow-hidden"
                   >
                     {' '}
                     ?
@@ -148,7 +150,7 @@ function About() {
                 whileInView={{ x: inView ? 0 : -100, opacity: inView ? 1 : 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
-                className=" font-montserrat w-[90%] lg:w-[70%] text-grey mt-10 text-center lg:text-left"
+                className=" font-montserrat w-[90%] lg:w-[80%] xl:w-[70%] text-grey  xl:mt-10 text-center lg:text-left"
               >
                 Hello, I'm Nihal N, a dedicated web developer from Kerala,
                 India. My passion lies in crafting intuitive and responsive web
@@ -190,7 +192,7 @@ function About() {
               </div>
               <div
                 ref={ex1Layer}
-                className=" text-[1rem] bg-[#000]  shadow-custom  text-white font-bold overflow-hidden font-terminal w-full h-[15rem] text-left flex flex-col gap-2  rounded-xl p-5"
+                className=" text-sm xl:text-[1rem] bg-[#000]  shadow-custom  text-white font-bold overflow-hidden font-terminal w-full h-[16rem] xl:h-[15rem] text-left flex flex-col gap-2  rounded-xl p-5"
               >
                 {inView && (
                   <>
