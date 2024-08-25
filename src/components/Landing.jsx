@@ -71,12 +71,12 @@ function Landing() {
         <div className="relative z-20 w-full rounded-l-full rounded-tr-full h-full bg-dark flex flex-col lg:flex-row justify-center items-center shadow-navbar">
           {/* mobile */}
           <div className="w-full px-8 lg:hidden flex flex-col justify-center p-5 font-normal tracking-wider text-[#e0e0e0] font-montserrat items-center  relative text-lg">
-            <div className="text-left flex flex-col gap-1 w-full md:items-center">
+            <div className="text-left flex flex-col gap-1 w-full sm:items-center">
             <motion.p
                 initial={{ y: -20, opacity: 0 }} // Added opacity here
                 animate={{ y: 0, opacity: 1 }} // Added opacity here
                 transition={{ duration: 1, delay: 0.4 }}
-                className="text-lg font-semibold font-mono md:w-[20rem]"
+                className="text-lg font-semibold font-mono sm:w-[20rem]"
               >
                 Hey, I'm
               </motion.p>
@@ -84,7 +84,7 @@ function Landing() {
                 initial={{ y: -20, opacity: 0 }} // Added opacity here
                 animate={{ y: 0, opacity: 1 }} // Added opacity here
                 transition={{ duration: 1, delay: 0.2 }}
-                className="text-5xl md:text-6xl text-cyan font-montserrat font-semibold relative -left-1 md:w-[20rem]"
+                className="text-5xl sm:text-6xl text-cyan font-montserrat font-semibold relative -left-1 sm:w-[20rem]"
               >
                 Nihal N
               </motion.p>
@@ -92,7 +92,7 @@ function Landing() {
                 initial={{ y: -20, opacity: 0 }} // Added opacity here
                 animate={{ y: 0, opacity: 1 }} // Added opacity here
                 transition={{ duration: 1 }}
-                className="md:w-[20rem] h-[3rem]"
+                className="sm:w-[20rem] h-[3rem]"
               >
                 <Typewriter
                   options={{
@@ -108,36 +108,56 @@ function Landing() {
                   }}
                 />
               </motion.div>
-              <div className="flex gap-10  items-center justify-between md:justify-start h-fit w-full md:w-[20rem]  mt-10">
-                <a href="https://github.com/niha1n/">
+              <div className="flex gap-10  items-center justify-between sm:justify-start h-fit w-full sm:w-[20rem]  mt-10">
+              <motion.a
+                  initial={{ y: -20, opacity: 0 }} // Added opacity here
+                  animate={{ y: 0, opacity: 1 }} // Added opacity here
+                  transition={{ duration: 0.7, delay: 0.2 }}
+                  href="https://github.com/niha1n/"
+                >
                   <img
                     src={github}
                     className="h-full w-7 hover:-translate-y-[2px] duration-100"
                     alt="GitHub"
                   />
-                </a>
+                </motion.a>
 
-                <a href="https://www.linkedin.com/in/n-nihal/">
+                <motion.a
+                  initial={{ y: -20, opacity: 0 }} // Added opacity here
+                  animate={{ y: 0, opacity: 1 }} // Added opacity here
+                  transition={{ duration: 0.7, delay: 0.4 }}
+                  href="https://www.linkedin.com/in/n-nihal/"
+                >
                   <img
                     src={linkedin}
                     className="h-full w-7 hover:-translate-y-[2px] duration-100"
                     alt="LinkedIn"
                   />
-                </a>
-                <a href="https://wa.me/918281537869">
+                </motion.a>
+                <motion.a
+                  initial={{ y: -20, opacity: 0 }} // Added opacity here
+                  animate={{ y: 0, opacity: 1 }} // Added opacity here
+                  transition={{ duration: 0.7, delay: 0.6 }}
+                  href="https://wa.me/918281537869"
+                >
                   <img
                     src={whatsapp}
                     className="h-full w-7 hover:-translate-y-[2px] duration-100"
                     alt="WhatsApp"
                   />
-                </a>
-                <a href="https://gmail.com">
+                </motion.a>
+                <motion.a
+                  initial={{ y: -20, opacity: 0 }} // Added opacity here
+                  animate={{ y: 0, opacity: 1 }} // Added opacity here
+                  transition={{ duration: 0.7, delay: 0.8 }}
+                  href="mailto:nihal.n.13.02@gmail.com?subject=Let's%20Collaborate&body=Hi%20Nihal,"
+                >
                   <img
                     src={email}
                     className="h-full w-7 hover:-translate-y-[2px] duration-100"
                     alt="Email"
                   />
-                </a>
+                </motion.a>
               </div>
             </div>
           </div>
