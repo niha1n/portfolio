@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
+import {motion} from 'framer-motion';
 
 function Topbar() {
   return (
@@ -12,14 +13,22 @@ function Topbar() {
           duration={1000}
           className="h-full w-auto cursor-pointer"
         >
-          <img
+          <motion.img
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
             src="logo.svg"
             className="h-full lg:w-20 w-auto drop-shadow-custom "
             alt="Logo"
           />
         </Link>
 
-        <button
+        <motion.button
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
           onClick={() =>
             (window.location.href =
               "mailto:nihal.n.13.02@gmail.com?subject=Let's%20Collaborate&body=Hi%20Nihal,")
@@ -27,7 +36,7 @@ function Topbar() {
           className="bg-cyan rounded-full h-2/3 px-5 text-md text-dark font-mono tracking-wider drop-shadow-custom"
         >
           hire me
-        </button>
+        </motion.button>
       </div>
     </>
   );

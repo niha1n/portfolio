@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import NavBtn from './reusable/NavBtn';
 import Typewriter from 'typewriter-effect';
 import email from '../assets/email.png';
 import whatsapp from '../assets/whatsapp.png';
 import linkedin from '../assets/linkedin.png';
 import github from '../assets/github.png';
-import { AnimatePresence, motion } from 'framer-motion';
+import {motion } from 'framer-motion';
 
 function Landing() {
   const lines = [
@@ -44,7 +43,7 @@ function Landing() {
   return (
     <div
       id="home"
-      className=" h-[95vh] flex items-center w-full  flex-col  justify-center p-5 relative z-0"
+      className=" h-screen flex items-center w-full  flex-col  justify-center p-5 relative z-0"
     >
       <div className="absolute bottom-0 w-full h-24 z-50 bg-gradient-to-b from-transparent opacity-70 to-[#000000]"></div>
 
@@ -65,7 +64,11 @@ function Landing() {
         }}
       ></motion.div>
 
-      <div className="relative w-[90%] lg:w-[80%] p-[1.5px] flex h-[30rem] z-10 rounded-l-full rounded-tr-full overflow-hidden shadow-navbar">
+      <motion.div initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }} 
+            className="relative w-[90%] lg:w-[80%] p-[1.5px] flex h-[30rem] z-10 rounded-l-full rounded-tr-full overflow-hidden shadow-navbar">
         <div className="animate-rotate z-10 absolute inset-0 h-full w-full rounded-full bg-[conic-gradient(#66fcf1_20deg,transparent_120deg)]"></div>
 
         <div className="relative z-20 w-full rounded-l-full rounded-tr-full h-full bg-dark flex flex-col lg:flex-row justify-center items-center shadow-navbar">
@@ -168,7 +171,7 @@ function Landing() {
               <motion.p
                 initial={{ y: -20, opacity: 0 }} // Added opacity here
                 animate={{ y: 0, opacity: 1 }} // Added opacity here
-                transition={{ duration: 1, delay: 0.4 }}
+                transition={{ duration: 1, delay: 1.4 }}
                 className="text-lg font-semibold font-mono md:w-[20rem]"
               >
                 Hey, I'm
@@ -176,7 +179,7 @@ function Landing() {
               <motion.p
                 initial={{ y: -20, opacity: 0 }} // Added opacity here
                 animate={{ y: 0, opacity: 1 }} // Added opacity here
-                transition={{ duration: 1, delay: 0.2 }}
+                transition={{ duration: 1, delay: 1.2 }}
                 className="text-5xl md:text-6xl text-cyan font-montserrat font-semibold relative -left-1 md:w-[20rem]"
               >
                 Nihal N
@@ -184,7 +187,7 @@ function Landing() {
               <motion.div
                 initial={{ y: -20, opacity: 0 }} // Added opacity here
                 animate={{ y: 0, opacity: 1 }} // Added opacity here
-                transition={{ duration: 1 }}
+                transition={{ duration: 1, delay:1 }}
                 className="md:w-[20rem]"
               >
                 <Typewriter
@@ -205,7 +208,7 @@ function Landing() {
                 <motion.a
                   initial={{ y: -20, opacity: 0 }} // Added opacity here
                   animate={{ y: 0, opacity: 1 }} // Added opacity here
-                  transition={{ duration: 0.7, delay: 0.2 }}
+                  transition={{ duration: 0.7, delay: 1.2 }}
                   href="https://github.com/niha1n/"
                 >
                   <img
@@ -218,7 +221,7 @@ function Landing() {
                 <motion.a
                   initial={{ y: -20, opacity: 0 }} // Added opacity here
                   animate={{ y: 0, opacity: 1 }} // Added opacity here
-                  transition={{ duration: 0.7, delay: 0.4 }}
+                  transition={{ duration: 0.7, delay: 1.4 }}
                   href="https://www.linkedin.com/in/n-nihal/"
                 >
                   <img
@@ -230,7 +233,7 @@ function Landing() {
                 <motion.a
                   initial={{ y: -20, opacity: 0 }} // Added opacity here
                   animate={{ y: 0, opacity: 1 }} // Added opacity here
-                  transition={{ duration: 0.7, delay: 0.6 }}
+                  transition={{ duration: 0.7, delay: 1.6 }}
                   href="https://wa.me/918281537869"
                 >
                   <img
@@ -242,7 +245,7 @@ function Landing() {
                 <motion.a
                   initial={{ y: -20, opacity: 0 }} // Added opacity here
                   animate={{ y: 0, opacity: 1 }} // Added opacity here
-                  transition={{ duration: 0.7, delay: 0.8 }}
+                  transition={{ duration: 0.7, delay: 1.8 }}
                   href="mailto:nihal.n.13.02@gmail.com?subject=Let's%20Collaborate&body=Hi%20Nihal,"
                 >
                   <img
@@ -282,7 +285,7 @@ function Landing() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
