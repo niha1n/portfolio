@@ -5,7 +5,7 @@ import {
   useScroll,
   useTransform,
 } from 'framer-motion';
-import redirect from '../../assets/redirect.png';
+import redirect from '../../assets/navIcons/link.svg';
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -57,14 +57,14 @@ function Cards({ title, desc, github, liveLink, img, tools, domains }) {
           exit={{ opacity: 0, scale: 0.9 }}
           transition={{ delay: 0.3, duration: 0.5 }}
           ref={ref}
-          className="flex flex-col lg:flex-row justify-start items-center h-[80vh] lg:h-[25rem] w-full gap-10 mb-24 border-[3px]  rounded-3xl overflow-hidden backdrop-blur-xl  border-cyan relative"
+          className="flex flex-col lg:flex-row justify-start items-center h-[80vh] lg:h-[25rem] w-full gap-10 mb-24 border-[1px]  rounded-3xl overflow-hidden backdrop-blur-xl  border-cyan relative"
         >
-          <div
+          {/* <div
             onClick={handleRedirect}
             className="absolute w-10 top-0 right-0  p-2 rounded-bl-md bg-cyan z-[50] cursor-pointer"
           >
             <img src={redirect} className="w-full bg-cyan" alt="" />
-          </div>
+          </div> */}
 
           <motion.div
             className="relative w-full lg:w-[50%] xl:w-1/3 h-full bg-gray-900 lg:rounded-l-3xl cursor-pointer overflow-hidden"
@@ -83,6 +83,12 @@ function Cards({ title, desc, github, liveLink, img, tools, domains }) {
               className={`font-mark-pro text-2xl lg:text-5xl font-semibold text-white drop-shadow-lg`}
             >
               {title}
+              <div
+                onClick={handleRedirect}
+                className="relative top-2 w-10 lg:w-12 p-2 cursor-pointer inline-block"
+              >
+                <img src={redirect} className="w-full" alt="" />
+              </div>
             </motion.p>
             <div className="flex items-center justify-start gap-3 flex-wrap">
               {domains.map((domain, id) => {

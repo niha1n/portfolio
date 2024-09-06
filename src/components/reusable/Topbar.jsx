@@ -33,7 +33,7 @@ function Topbar() {
             (window.location.href =
               "mailto:nihal.n.13.02@gmail.com?subject=Let's%20Collaborate&body=Hi%20Nihal,")
           }
-          className="bg-cyan rounded-full h-2/3 px-5 text-md text-dark font-mono tracking-wider drop-shadow-custom"
+          className="bg-cyan hover:bg-[#4cbcb5] duration-200 rounded-full h-2/3 px-5 text-md text-dark font-mono tracking-wider drop-shadow-custom"
         >
           hire me
         </motion.button>

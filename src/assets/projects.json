@@ -13,7 +13,7 @@
     "desc": "A highly efficient support ticket application using React.js, Node.js, Express,  and MongoDB, resulting in a 50% decrease in customer support response time and a 25% increase in customer satisfaction.",
     "tools": "React.js, Node.js, MongoDB, Express",
     "github": "www.github.com",
-    "live": "https://peppy-marigold-86aa2f.netlify.app",
+    "live": "https://quicksupportapp.netlify.app/",
     "img": "/projectImages/support.svg",
     "domains":["UI/UX", "Frontend","Backend"]
   },
@@ -22,7 +22,7 @@
     "desc": " 'DRUMP' is a web application that brings you a curated selection of random quotes from former President Donald Trump, presented in a familiar tweet format. Delve into the unpredictable and often amusing world of his quotes as you explore the essence of his unique communication style.",
     "tools": "React.js, TailwindCSS, TronaldDump API",
     "github": "www.github.com",
-    "live": "https://effortless-paprenjak-9ccc7a.netlify.app",
+    "live": "https://drumpquotes.netlify.app/",
     "img": "/projectImages/drump.svg",
     "domains":["UI/UX", "Frontend"]
   }

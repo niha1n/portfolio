@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import contact from '../assets/navIcons/contact.png';
 
+
 function About() {
   const constrain = 700;
   const mouseOverContainer = useRef(null);
@@ -82,7 +83,7 @@ function About() {
 
         {/* <div className="absolute bottom-0 w-full h-24 bg-gradient-to-b from-dark  to-black"></div> */}
         <div className="relative  flex flex-col h-full items-center justify-center">
-          <div className="flex flex-col justify-between lg:flex-row w-4/5 h-3/4  ">
+          <div className="flex flex-col justify-between lg:flex-row w-[90%] px-2 lg:px-0 lg:w-4/5 h-3/4  ">
             <div className="flex  lg:w-2/3   lg:pl-16 items-center lg:items-start justify-center flex-col gap-5">
               <div className="w-full h-fit flex items-center justify-center lg:justify-start gap-3">
                 <AnimatePresence>
@@ -150,7 +151,7 @@ function About() {
                 whileInView={{ x: inView ? 0 : -100, opacity: inView ? 1 : 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
-                className=" font-montserrat w-[90%] lg:w-[80%] xl:w-[70%] text-grey  xl:mt-10 text-center lg:text-left"
+                className="hidden lg:block font-montserrat w-full lg:w-[80%] xl:w-[70%] text-grey  xl:mt-10 text-center lg:text-left"
               >
                 Hello, I'm Nihal N, a dedicated web developer from Kerala,
                 India. My passion lies in crafting intuitive and responsive web
@@ -159,6 +160,15 @@ function About() {
                 delivering top-notch frontend development services, I stay
                 abreast of the latest industry trends. Beyond coding, I immerse
                 myself in diverse tech projects, always expanding my expertise.
+              </motion.p>
+              <motion.p
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: inView ? 0 : -100, opacity: inView ? 1 : 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="  lg:hidden font-montserrat w-full lg:w-[80%] xl:w-[70%] text-grey  xl:mt-10 text-center lg:text-left"
+              >
+                Hi, I'm Nihal N, a web developer from Kerala, India. I specialize in creating intuitive and responsive web apps. I'm passionate about tackling challenges and learning new technologies to deliver high-quality frontend development. Beyond coding, I engage in tech projects to broaden my skills.
               </motion.p>
               <Link to="contact" spy={true} smooth={true} duration={1000}>
               <motion.button
@@ -192,7 +202,7 @@ function About() {
               </div>
               <div
                 ref={ex1Layer}
-                className=" text-sm xl:text-[1rem] bg-[#000]  shadow-custom  text-white font-bold overflow-hidden font-terminal w-full h-[16rem] xl:h-[15rem] text-left flex flex-col gap-2  rounded-xl p-5"
+                className=" text-sm md:text-lg lg:text-sm xl:text-[1rem] bg-[#000]  shadow-custom  text-white font-bold overflow-hidden font-terminal w-full h-[16rem] xl:h-[15rem] text-left flex flex-col gap-2  rounded-xl p-5"
               >
                 {inView && (
                   <>

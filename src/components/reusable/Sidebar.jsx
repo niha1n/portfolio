@@ -61,7 +61,7 @@ function Sidebar() {
       </motion.div>
 
       {/* Mobile view */}
-      <div className="fixed bottom-5 flex lg:hidden items-center justify-center h-[5rem] w-full  z-[100]">
+      <div className="fixed bottom-0 flex lg:hidden items-center justify-center h-[5rem] w-full  z-[100]">
         <div className="  bg-[#171717] w-[90%] h-2/3 rounded-full shadow-navbar flex items-center justify-evenly gap-7">
           <div className="w-6 h-6 hover:scale-[1.1] duration-300">
             <Link to="home" spy={true} smooth={true} duration={1000}>
